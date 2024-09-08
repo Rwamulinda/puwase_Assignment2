@@ -9,7 +9,7 @@ int main() {
     int guess;
     int attempts = 0;
 
-    printf("Think a number between 1 and %d, and I'll try to guess it!\n", GUESS_RANGE);
+    printf("Think a number between 1 and %d, and I'll try to guess it!\n", GUESS_RANGE); // asking a user to think about a number
 
     // Continue guessing using while loop to validate the range
     while (lower_bound <= higher_range) {       // checking the boundaries
@@ -17,7 +17,7 @@ int main() {
         attempts++;
         printf("I guessed %d.\n", guess);
         printf("rules of the game. \n");
-        printf("If the number you though about is HIGHER than my guess, enter 'H'.\n");
+        printf("If the number you though about is HIGHER than my guess, enter 'H'.\n");  
         printf("If the number you though about is LOWER than my guess, enter 'L'.\n");
         printf("If my guess is correct, enter '='.\n");
         printf("Type your response: ");   // asking a user to type reponse
@@ -34,6 +34,11 @@ int main() {
             printf("incorrect entry '%c'. Please enter between H, L, or =\n", answer); // incase you write something that is not H,L or =
         }
     }
+// adding the inconsistency
+ if (lower_bound > higher_range) {
+    
+    printf("Inconsistent responses found. Exiting the program...\n");
+ }
 
-    return 0;
+  return 0;
 }
