@@ -20,10 +20,10 @@ int main() {
         printf("If the number you though about is HIGHER than my guess, enter 'H'.\n");
         printf("If the number you though about is LOWER than my guess, enter 'L'.\n");
         printf("If my guess is correct, enter '='.\n");
-        printf("Type the number you though about: ");   // asking a user to type the number he/she thought  about
-        scanf(" %c", &answer);
+        printf("Type your response: ");   // asking a user to type reponse
+        scanf(" %c", &answer);             // save the response
 
-        if (answer == 'H') {
+        if (answer == 'H') {               // comparing the answer with the guess
             lower_bound = guess + 1;
         } else if (answer == 'L') {
             higher_range = guess - 1;
