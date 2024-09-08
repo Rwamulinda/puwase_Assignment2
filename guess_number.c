@@ -20,7 +20,7 @@ int main() {
         printf("If the number you though about is HIGHER than my guess, enter 'H'.\n");
         printf("If the number you though about is LOWER than my guess, enter 'L'.\n");
         printf("If my guess is correct, enter '='.\n");
-        printf("Response: ");
+        printf("Type the number you though about: ");   // asking a user to type the number he/she thought  about
         scanf(" %c", &answer);
 
         if (answer == 'H') {
