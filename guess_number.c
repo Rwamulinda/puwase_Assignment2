@@ -5,7 +5,7 @@
 
 int main() {
     int lower_bound = 1, higher_range = GUESS_RANGE;
-    char response;
+    char answer;
     int guess;
     int attempts = 0;
 
@@ -20,17 +20,17 @@ int main() {
         printf("If the answer is LOWER than my guess, enter 'L'.\n");
         printf("If my guess is correct, enter '='.\n");
         printf("Response: ");
-        scanf(" %c", &response);
+        scanf(" %c", &answer);
 
-        if (response == 'H') {
+        if (answer == 'H') {
             lower_bound = guess + 1;
-        } else if (response == 'L') {
+        } else if (answer == 'L') {
             higher_range = guess - 1;
-        } else if (response == '=') {
+        } else if (answer == '=') {
             printf("Got the right number with %d guesses!\n", attempts);
             break;  // End the game if the correct number is guessed
         } else {
-            printf("Invalid entry '%c'. Please enter H, L, or =\n", response);
+            printf("Invalid entry '%c'. Please enter H, L, or =\n", answer);
         }
     }
 
